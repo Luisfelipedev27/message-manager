@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module MessageManager
   class Application < Rails::Application
+    config.before_configuration do
+      config.secret_key_base = ENV["SECRET_KEY_BASE"] if ENV["SECRET_KEY_BASE"].present?
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 
