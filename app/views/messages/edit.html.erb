@@ -1,4 +1,17 @@
-<div>
-  <h1 class="font-bold text-4xl">Messages#edit</h1>
-  <p>Find me in app/views/messages/edit.html.erb</p>
+<div class="px-4 sm:px-6 lg:px-8">
+  <div class="mb-4">
+    <%= link_to @message, class: "text-sm text-gray-500 hover:text-gray-700" do %>
+      ← Back to message
+    <% end %>
+  </div>
+
+  <div class="max-w-3xl">
+    <h1 class="text-3xl font-bold text-gray-900 mb-6">Edit Message</h1>
+
+    <div class="bg-white shadow sm:rounded-lg">
+      <div class="px-4 py-5 sm:p-6">
+        <%= render "form", message: @message %>
+      </div>
+    </div>
+  </div>
 </div>
