@@ -2,6 +2,8 @@
 
 Rails application for managing messages with automatic Slack notifications via webhook integration.
 
+Application: https://message-manager-production-d7bd.up.railway.app/
+
 ## Requirements
 
 - Ruby 3.2.2
@@ -63,6 +65,7 @@ Access the application at http://localhost:3000
 - RESTful API with API key authentication
 - Responsive web interface with Tailwind CSS
 - PostgreSQL database
+- Updates and deletions are not notified to avoid spam
 
 ## API Usage
 
