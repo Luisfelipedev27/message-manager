@@ -1,7 +1,7 @@
 module Api
   module V1
     class MessagesController < BaseController
-      before_action :set_message, only: [:show, :update, :destroy]
+      before_action :set_message, only: [ :show, :update, :destroy ]
 
       def index
         @messages = Message.order(created_at: :desc).limit(100)

@@ -10,15 +10,15 @@ module Api
       private
 
       def authenticate_with_api_key
-        api_key = request.headers['X-API-Key']
+        api_key = request.headers["X-API-Key"]
 
         unless api_key && ApiKey.active.exists?(token: api_key)
-          render json: { error: 'Unauthorized' }, status: :unauthorized
+          render json: { error: "Unauthorized" }, status: :unauthorized
         end
       end
 
       def not_found
-        render json: { error: 'Resource not found' }, status: :not_found
+        render json: { error: "Resource not found" }, status: :not_found
       end
 
       def unprocessable_entity(exception)

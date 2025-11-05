@@ -1,7 +1,7 @@
 class SlackNotificationService
   def initialize(message)
     @message = message
-    @webhook_url = ENV['SLACK_WEBHOOK_URL']
+    @webhook_url = ENV["SLACK_WEBHOOK_URL"]
   end
 
   def call
@@ -19,7 +19,7 @@ class SlackNotificationService
   def send_notification
     HTTParty.post(
       webhook_url,
-      headers: { 'Content-Type' => 'application/json' },
+      headers: { "Content-Type" => "application/json" },
       body: payload.to_json
     )
   end
