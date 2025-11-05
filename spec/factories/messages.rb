@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :message do
-    subject { "MyString" }
-    body { "MyText" }
+    subject { "Test Subject" }
+    body { "Test message body content" }
   end
 end
