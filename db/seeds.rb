@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+api_key = ApiKey.find_or_create_by!(name: "Development Key") do |key|
+  key.active = true
+end
+puts "API Key: #{api_key.token}"
+puts "(Use this in X-API-Key header for API requests)"
